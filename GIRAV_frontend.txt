@@ -1,0 +1,20 @@
+// App.js
+function App() {
+  return (
+    <Router>
+      <AuthProvider>
+        <div className="App">
+          <Navbar />
+          <Routes>
+            <Route path="/login" element={<Login />} />
+            <Route path="/" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
+            <Route path="/data-entry" element={<ProtectedRoute><DataEntry /></ProtectedRoute>} />
+            <Route path="/beneficiaries" element={<ProtectedRoute><Beneficiaries /></ProtectedRoute>} />
+            <Route path="/reports" element={<ProtectedRoute><Reports /></ProtectedRoute>} />
+            <Route path="/admin" element={<ProtectedRoute role="admin"><Admin /></ProtectedRoute>} />
+          </Routes>
+        </div>
+      </AuthProvider>
+    </Router>
+  );
+}
