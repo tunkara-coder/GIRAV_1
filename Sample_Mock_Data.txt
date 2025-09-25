@@ -1,0 +1,18 @@
+// frontend/src/mocks/mockData.js
+export const mockBeneficiaries = [
+  {
+    id: 1,
+    name: "Aminata Jallow",
+    type: "individual",
+    gender: "female",
+    category: "smallholder",
+    location: "North Bank Region"
+  }
+];
+
+export const mockReports = {
+  competitiveness: {
+    marketedOutput: { total: 15000, female: 8000, male: 7000 },
+    productivity: { rice: 2.5, cashew: 1.8, horticulture: 3.2 }
+  }
+};

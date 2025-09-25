@@ -1,0 +1,7 @@
+echo "# girav-portal" >> README.md
+git init
+git add .
+git commit -m "Initial mockup"
+git branch -M main
+git remote add origin https://github.com/yourusername/girav-portal.git
+git push -u origin main

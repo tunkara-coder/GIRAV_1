@@ -1,0 +1,21 @@
+
+## **Option 2: Live Demo with GitHub Pages + Mock API**
+
+### **Use Mock Service Worker (MSW) for Frontend Demo**
+```javascript
+// frontend/src/mocks/handlers.js
+export const handlers = [
+  // Mock API endpoints
+  rest.get('/api/beneficiaries', (req, res, ctx) => {
+    return res(ctx.json(mockBeneficiaries));
+  }),
+  
+  rest.post('/api/data/marketed-output', (req, res, ctx) => {
+    return res(ctx.json({ success: true }));
+  }),
+  
+  // Mock reports data
+  rest.get('/api/reports/pdo-indicators', (req, res, ctx) => {
+    return res(ctx.json(mockReports));
+  })
+];
